@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="">
+
+    <div id="container" class="bg-cover bg-center flex justify-center flex-col items-center h-screen" style="background-image: url('../images/bg.jpg');">
+        <div class="bg-gray-200 p-5 rounded-lg">
+            <div class="app-details ">
+                <img src="../images/converter-image.png" alt="" class="w-20 text-center mx-auto mb-4">
+                <h1 id="app-title" class="text-3xl font-bold uppercase mb-4">
+                    Currency Converter
+                </h1>
+            </div>
+    
+            <label for="amount" class="block mb-2 font-bold">Amount:</label>
+            <input type="number" id="amount" class="mb-8 w-full p-2 border-b-4 border-gray-600 bg-transparent" value="100">
+            <div class="dropdowns flex justify-between">
+                <select id="from-currency-select" class="bg-blue-300 px-10 py-2 rounded-md"></select>
+                <select id="to-currency-select" class="bg-blue-300 px-10 py-2 rounded-md"></select>
+            </div>
+            <button id="convert-button" class=" bg-purple-500 w-full mt-6 mb-5 p-3 rounded-md font-bold text-white"> Convert</button>
+            <p id="result" class="bg-gray-300 p-4 rounded-md text-center font-bold"></p>
+        </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="./js/currency-codes.js"></script>
+    <script src="./js/api-key.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
