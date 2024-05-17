@@ -31,8 +31,18 @@
     </div>
 
     <!-- javascript -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('ServiceWorker registered: ', registration.scope);
+                }).catch(error => {
+                    console.log('ServiceWorker registration failed: ', error);
+                });
+            });
+        }
+    </script>
     <script src="./js/currency-codes.js"></script>
-    <script src="./js/api-key.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>

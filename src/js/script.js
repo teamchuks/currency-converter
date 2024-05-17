@@ -9,11 +9,11 @@ const toDropDown = document.querySelector("#to-currency-select");
 // fetch API
 fetch(apiURL).then((res) => res.json())
 .then((data) => {
-    console.log(data);
+    // console.log(data);
     const currencyCodes = Object.keys(data.conversion_rates);
 
     // Output the list of currency codes
-    console.log(currencyCodes);
+    // console.log(currencyCodes);
 })
 .catch((error) => {
     console.log('there is an error here:', error);
@@ -51,9 +51,9 @@ const convertCurrency = () => {
         fetch(apiURL).then((res) => res.json())
         .then((data) => {
             let fromExchangeRate = data.conversion_rates[fromCurrency];
-            console.log('rate is', fromExchangeRate)
+            // console.log('rate is', fromExchangeRate)
             let toExchangeRate = data.conversion_rates[toCurrency];
-            console.log('the converted rate is', toExchangeRate);
+            // console.log('the converted rate is', toExchangeRate);
 
             // converted amount
             const convertedAmount = (amountValue / fromExchangeRate) * toExchangeRate;
